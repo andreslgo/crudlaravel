@@ -19,5 +19,9 @@ Este es un ejemplo sencillo de como realizar un CRUD usando Laravel + VueJS.
 
 	`npm run dev` ó `npm run watch`
 
+* Cree la base de datos y modifique el archivo .env.
+
+* Ejecute las migraciones con `php artisan migrate`
+
 * Realice las rutas en su servidor o ejecute
 	`php artisan serve`
