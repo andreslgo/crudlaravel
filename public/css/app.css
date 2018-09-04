@@ -8381,3 +8381,7 @@ button.close {
   }
 }
 
+.navbar {
+  border-radius: 0px;
+}
+
