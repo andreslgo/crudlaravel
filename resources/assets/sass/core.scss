@@ -1,0 +1,25 @@
+#app{
+	padding: 0px 20px;
+}
+
+.table-customers{
+	margin-top: 10px;
+	.options{
+		font-size: 1.8rem;
+		text-align: center;
+		a{
+			margin: 0 3px;
+		}
+	}
+}
+
+.modal-header .close{
+	margin-top: -30px;
+}
+
+#modalCustomer .modal-dialog{
+	width: 90%;
+	@media (min-width: 950px){
+		width: 900px;	
+	}
+}
