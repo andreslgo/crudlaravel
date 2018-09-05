@@ -44,7 +44,7 @@ const app = new Vue({
                 this.customer = null;
             }else{
                 for(i in this.data){
-                    if(this.data[i].id = id){
+                    if(this.data[i].id == id){
                         this.customer = this.data[i];
                         break;
                     }
