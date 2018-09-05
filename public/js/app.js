@@ -44124,7 +44124,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: {
@@ -44178,7 +44177,6 @@ var render = function() {
               _c("td", [_vm._v(_vm._s(value.email))]),
               _vm._v(" "),
               _c("td", { staticClass: "options" }, [
-                _vm._v("\n\t\t\t\t\t" + _vm._s(value.id) + "\n\t\t\t\t\t"),
                 _c(
                   "a",
                   {

@@ -25,7 +25,6 @@
 					<td>{{value.phone}}</td>
 					<td>{{value.email}}</td>
 					<td class="options">
-						{{value.id}}
 						<a href="#" title="Editar Cliente" @click.prevent="modalCustomer(value.id, 2)"><i class="far fa-edit"></i></a>
 						<a href="#" title="Eliminar Cliente" @click.prevent="modalCustomer(value.id, 3)"><i class="far fa-trash-alt"></i></a>
 					</td>
