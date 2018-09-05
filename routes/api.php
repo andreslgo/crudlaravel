@@ -18,3 +18,7 @@ Route::get('/countries', 'CountriesController@get');
 Route::get('/cities/{idCountry}', 'CitiesController@get');
 Route::get('/customertypes', 'CustomerTypesController@get');
 Route::get('/customers', 'CustomersController@get');
+Route::get('/customers/{idCustomer}', 'CustomersController@getOne');
+Route::post('/customers', 'CustomersController@create');
+Route::put('/customers', 'CustomersController@update');
+Route::delete('/customers/{idCustomer}', 'CustomersController@delete');

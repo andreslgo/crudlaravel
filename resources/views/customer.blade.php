@@ -17,7 +17,7 @@
           <span class="navbar-brand" href="#">Clientes</span>
         </nav>
         <div id="app">
-            <form-customer @update="updateCustomers" :action="action" :idCustomer="idCustomer" @modal="modalCustomer"></form-customer>
+            <form-customer @update="updateCustomers" :action="action" :customer="customer" @modal="modalCustomer"></form-customer>
             <table-customers :data="data" @modal="modalCustomer"></table-customers>
         </div>
         <script src="{{ asset('js/app.js')}}"></script>

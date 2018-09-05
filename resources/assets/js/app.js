@@ -8,6 +8,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+axios = require('axios');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -15,7 +16,6 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('form-customer', require('./components/FormCustomer.vue'));
 Vue.component('table-customers', require('./components/TableCustomers.vue'));
 
@@ -29,30 +29,39 @@ const app = new Vue({
 				action: 3  -- Eliminar Cliente
     		*/
     		action: 1,
-    		idCustomer: null, 
-    		data: [
-    			{
-    				id: 1,
-    				nit: 900500500,
-    				name: 'Bicco Farms',
-    				customer_type: 'Persona Juridica',
-    				country: 'Colombia',
-    				city: 'Bogota',
-    				address: 'Cra 14 No. 79-78',
-    				phone: '3007393899',
-    				email: 'andresl@biccofarms.com'
-    			}
-    		]
+    		data: null,
+            customer: null
     	}
     },
     methods: {
     	updateCustomers() {
-    		console.log('Actualizado');
+    		$("#modalCustomer").modal('hide');
+            this.getCustomers();
     	},
     	modalCustomer(id, op){
-    		this.idCustomer = id;
     		this.action = op;
+            if(id == null){
+                this.customer = null;
+            }else{
+                for(i in this.data){
+                    if(this.data[i].id = id){
+                        this.customer = this.data[i];
+                        break;
+                    }
+                }    
+            }
+            
     		$("#modalCustomer").modal('show');
-    	}
+    	},
+        getCustomers(){
+            let self = this;
+            axios.get('api/customers')
+            .then(response => {
+                self.data = response.data
+            });
+        }
+    },
+    mounted(){
+        this.getCustomers();
     }
 });
